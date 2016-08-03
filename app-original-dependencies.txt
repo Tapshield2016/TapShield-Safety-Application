@@ -1,0 +1,8 @@
+DONE (AAR) android.library.reference.1=../javelin-android
+DONE (GRADLE) android.library.reference.2=../google-maps-android-api-util-library/library
+DONE (GRADLE) android.library.reference.3=../../../workspace/android-crop-0.9.9
+DONE (GRADLE) android.library.reference.4=../../../workspace/facebook-android-sdk-3.7/facebook
+DONE (MANUAL MODULE) android.library.reference.5=../../../workspace/ImageFlipAnimator
+DONE (MANUAL MODULE) android.library.reference.6=../../../workspace/GaussianBlurBitmapGenerator
+DONE (MANUAL MODULE) android.library.reference.7=../../../workspace/SAX-RSS-Reader
+REPLACED WITH PICASSO (GRADLE) android.library.reference.8=../android-argazki
