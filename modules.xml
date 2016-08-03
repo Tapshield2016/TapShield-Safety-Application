@@ -3,11 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-android-studio.iml" filepath="$PROJECT_DIR$/app-android-studio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/image-flip-animator/image-flip-animator.iml" filepath="$PROJECT_DIR$/image-flip-animator/image-flip-animator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/saxRssReader/saxRssReader.iml" filepath="$PROJECT_DIR$/saxRssReader/saxRssReader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ts-javelin/ts-javelin.iml" filepath="$PROJECT_DIR$/ts-javelin/ts-javelin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/v7-radial-blur/v7-radial-blur.iml" filepath="$PROJECT_DIR$/v7-radial-blur/v7-radial-blur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javelin-android-studio.iml" filepath="$PROJECT_DIR$/javelin-android-studio.iml" />
     </modules>
   </component>
 </project>
