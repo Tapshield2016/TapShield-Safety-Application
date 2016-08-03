@@ -1,2 +1,1 @@
-include ':app', ':ts-javelin', 'image-flip-animator', 'v7-radial-blur'
-include ':saxRssReader'
+include ':app'
