@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="ts-javelin-unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/okio-1.0.1.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/aws-android-sdk-1.7.1.1-s3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/aws-android-sdk-1.7.1.1-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/aws-android-sdk-1.7.1.1-sqs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/okhttp-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/aws-android-sdk-1.7.1.1-ddb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/app-android-studio/ts-javelin/unspecified/jars/libs/aws-android-sdk-1.7.1.1-sns.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
