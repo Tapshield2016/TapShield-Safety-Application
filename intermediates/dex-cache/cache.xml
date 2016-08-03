@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\arjleon\Documents\android\tapshield\app-android-studio\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="452a07a814840c082f3ae085e8eb5ac3ac66f852">
+        <dex dex="C:\Users\arjleon\Documents\android\tapshield\app-android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_592ed6ebaa83982cbda8fb846f26ecd259a7a0af\classes.dex" />
+    </item>
+
+</items>
