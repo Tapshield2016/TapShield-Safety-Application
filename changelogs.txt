@@ -1,0 +1,42 @@
+TapShield Migration to Android Studio
+
+
+JAVELIN SDK FOR ANDROID:
+
+-Updated Gradle, SDK, Build Tools, Platform tools. Project is also Android Studio 2.0.0-compatible, recently released.
+-Update target to 22 (23 is currently the latest stable but requires a fair amount of changes to deal with runtime permissions handling, a la iOS--for now it will run in compat mode without issues)
+-Updated libraries from local JARs to Maven-level imports when possible, part done by the IDE, part done myself (check App-level build.gradle file)
+-Optimized some null checks in some files
+-Marked some old code as @Deprecated related to how push notifications were handled in the past.
+-Removed the whole Google Play Services project dependency, it was the approach with Eclipse, now it's just a subset of the APIs limited to the base and GCM services to achieve a smaller app size. This led to the following:
+	-Renamed package com.tapshield.android.api.receiver to com.tapshield.android.api.gcm to serve as container for everything GCM.
+	-Improved GCM message checks to consider additions in the latest version
+	-Improved GCM version to the latest, old might work but since it's deprecated, could be removed at any moment.
+	-It entailed the new implementation of:
+		* ...gcm.TapshieldGcmListenerServices, listens for GCM messages.
+		* ...gcm.TapshieldInstanceIDListenerService, notified when the token has changed, it is not the responsibility of the app to check for new/changed tokens.
+		* ...gcm.TapshieldRegistrationService, service ran when token changes and the backend needs to be notified with the updated token.
+	Note: The full, complete, implementation of the latest GCM service has to be done by the application, we just offer the classes to do the work for the app with the manifest entries pointing to these SDK classes.
+
+In order to build the Javelin SDK, one can run the gradle scripts that will build and generate the AAR (Android Archive file) inside <proj root>\app\build\outputs\aar as app-debug, or app-release, depending on the type of build. (Linux/Mac (Windows if running MINGW32)
+
+Debug build: ./gradlew clean asDeb
+Release build: ./gradlew clean asR
+
+'asDeb' is enough to auto-complete 'assembleDebug', 'asR' stands for 'assembleRelease'. At this point there is no difference in the app-level build.gradle file for debug and release as 'buildTypes', so generating the release build is the way to go to keep it consistently for now should differences be added in the near future. IMPORTANT: Usually release builds are proguarded to obfuscate the code, at this point it's not worth it since it's not a public SDK and the TapShield app can run the proguard script in its release build, also obfuscating the SDK, to protect the code in any public artifacts.
+
+Now, I've made a script that will make your life easier to avoid calling the same commands everytime there are new changes to the javelin project. The script assumes that 'javelin-android-studio' and 'app-android-studio' are inside of the same folder. It will call './gradlew clean asDeb' to generate the AAR lib file and then will copy and rename it in the library module inside of the 'app-android-studio' project.
+
+Summary: When something changes in 'javelin-android-studio', call './build-javelin-lib.sh' via Terminal and it will build and automatically copy/rename the file into the app project. The app project can now rebuild with the updated AAR.
+
+TAPSHIELD APP FOR ANDROID:
+
+I have updated *most* of the libraries to be pulled via gradle (maven dependencies) but some are going to be added as modules, just like the 'ts-javelin' module. The difference is that the 'ts-javelin' module builds an AAR while the other modules will contain the source code and will be built along with the everything else. Note: Even though the modules are in the same folder, they are not marked as a dependency. List can be found at the app-level build.gradle file or in the File > Project Structure > (select App, main project) > Dependencies tab (this is the UI representation of the same build.gradle file.
+
+List of modules with the source code:
+-ImageFlipAnimator
+-Radial Blur (For v7 and lower without RenderScript)
+-SAX-RSS-Reader
+
+UPDATE: Facebook login because of newer versions--the implementation is just different.
+UPDATE: Google Developers Console project for the DEBUG and RELEASE keystores used for the app so Google Maps can run and authenticate.
